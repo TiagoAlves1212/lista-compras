@@ -40,6 +40,6 @@ Licença
 Este projeto está licenciado sob a MIT License - veja o arquivo LICENSE para mais detalhes.
 
 Contato
-Nome: Seu Nome
-Email: seu.email@example.com
-LinkedIn: Seu LinkedIn
+Nome: Tiago da Silva Alves
+Email: tiago2018cel123@gmail.com
+LinkedIn: linkedin.com/in/tiago-alves-817145195
