@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  animation: fadeIn 5s ease forwards;
+  padding-bottom: 50px;
+}
+
+html {
+  background-color: #1f1f1f;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+}
+
+header {
+  max-width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding: 0.5rem;
+}
+
+header h1 {
+  font-family: "MuseoModerno", sans-serif;
+  position: absolute;
+  top: 0;
+  left: 5px;
+}
+
+header h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transition: width 0.5s ease-in-out, left 0.5s ease-in-out;
+}
+
+header h1:hover::after {
+  width: 100%;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.input input {
+  outline: none;
+  height: 2px;
+  border: none;
+  border-radius: 25px;
+  animation: inputs 1.5s ease forwards;
+  padding-left: 8px;
+}
+
+#add {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgb(0, 240, 0);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  animation: enter 1.7s ease forwards;
+  transform: translateX(600px);
+}
+
+#add:hover {
+  background-color: rgb(3, 147, 3);
+}
+
+#add i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+li {
+  background-color: #2a2a2a;
+  padding: 20px 25px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-transform: capitalize;
+}
+
+li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.deletar {
+  color: red;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.editar {
+  color: blue;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.btn-salvar {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-salvar:hover {
+  background-color: #218838;
+}
+
+input.edit-input {
+  outline: none;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+footer {
+  background-color: #1f1f1f;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+@keyframes inputs {
+  to {
+    padding: 18px 8px;
+  }
+}
+
+@keyframes enter {
+  to {
+    transform: translate(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
