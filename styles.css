@@ -166,56 +166,36 @@ footer {
   width: 100%;
 }
 
-@media (max-width: 768px) {
-  header {
-    height: auto;
-    padding: 1rem;
-  }
-
-  header h1 {
-    font-size: 1.5rem;
-    text-align: center;
-    display: none;
-  }
-
+@media (max-width: 500px) {
   .input {
     flex-direction: column;
-    align-items: center;
-  }
-
-  .input input {
-    width: 90%;
-    margin-bottom: 10px;
   }
 
   #add {
-    width: 90%;
-    padding: 10px;
+    animation: none;
+    width: 80%;
+    transform: translateX(0);
     border-radius: 8px;
-    text-align: center;
-    font-size: 1rem;
+  }
+  input.edit-input {
+    height: 20px;
+    width: 30%;
   }
 
-  ul {
-    padding: 0;
+  .input input {
+    margin: 0;
+  }
+
+  .icons {
+    flex-direction: row;
   }
 
   li {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-  }
-
-  li span {
-    display: block;
-    margin: 5px 0;
-  }
-
-  footer {
-    font-size: 0.9rem;
-    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
+
 
 @keyframes inputs {
   to {
