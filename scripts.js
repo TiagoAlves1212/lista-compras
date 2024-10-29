@@ -32,7 +32,9 @@ function criarItemLista(nome, quantidade) {
   `;
 
   li.querySelector(".deletar").addEventListener("click", () => deletarItem(li));
-  li.querySelector(".editar").addEventListener("click", () => editarItem(li));
+  li.querySelector(".editar").addEventListener("click", () => {
+    editarItem(li);
+  });
   li.addEventListener("click", () => {
     li.querySelector(".nome-produto").classList.toggle("strikethrough");
   });
@@ -47,8 +49,8 @@ addProduto.addEventListener("click", () => {
     salvarLista();
 
     setTimeout(() => {
-      produto.value = '';
-      qtde.value = '';
+      produto.value = "";
+      qtde.value = "";
     }, 2000);
   } else {
     alert("Os campos não podem estar vazios");
@@ -64,6 +66,10 @@ function deletarItem(li) {
 function editarItem(li) {
   const nomeSpan = li.querySelector(".nome-produto");
   const quantidadeSpan = li.querySelector(".quantidade");
+
+  if (li.querySelector("input")) {
+    return;
+  }
 
   const novoNomeInput = document.createElement("input");
   novoNomeInput.type = "text";
