@@ -171,6 +171,10 @@ footer {
     flex-direction: column;
   }
 
+  header h1 {
+    display: none;
+  }
+
   #add {
     animation: none;
     width: 100%;
